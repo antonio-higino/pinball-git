@@ -6,7 +6,7 @@ public class LancarBola : MonoBehaviour
 {
     Rigidbody bola;
     public float forca = 0f;
-    float angulo = 340f;
+    float angulo = 160f;
 
     // Start is called before the first frame update
     void Start()
@@ -17,17 +17,7 @@ public class LancarBola : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        while (Input.GetKeyDown(KeyCode.Space)) {
-            //Apply a force to this Rigidbody in direction of this GameObjects up axis
-            forca += 1f;
-
-            if (forca >= 25f) {
-                break;
-            }
-        }
-
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
+        if (Input.GetKeyUp(KeyCode.Space)) {
             //Apply a force to this Rigidbody in direction of this GameObjects up axis
             float xComponent = Mathf.Cos(angulo * Mathf.PI / 180) * forca;
             float yComponent = Mathf.Sin(angulo * Mathf.PI / 180) * forca;
@@ -35,6 +25,13 @@ public class LancarBola : MonoBehaviour
             bola.AddForce(xComponent, yComponent, 0, ForceMode.Impulse);
 
             forca = 0f;
+
+        } else if (Input.GetKey(KeyCode.Space)) {
+            //Apply a force to this Rigidbody in direction of this GameObjects up axis
+
+            if (forca < 10f) {
+                forca += 0.05f;
+            }
         }
     }
 }
