@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LancarBola : MonoBehaviour
@@ -22,7 +20,7 @@ public class LancarBola : MonoBehaviour
     void Update()
     {
         //if (transform.position.x <= 10.598f && transform.position.x >= 10.596f) {
-            //if (transform.position.z <= -0.96f && transform.position.z >= -1.148f) {
+        //if (transform.position.z <= -0.96f && transform.position.z >= -1.148f) {
         if (Input.GetKeyUp(KeyCode.Space))
         {
             //Apply a force to this Rigidbody in direction of this GameObjects up axis
