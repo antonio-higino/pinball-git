@@ -6,35 +6,44 @@ using UnityEngine;
 public class Dobradica2 : MonoBehaviour
 {
 
-    Rigidbody dobraRigidbody;
 
-    Vector3 force;
+    public float restPosition = 0f;
+    public float pressedPosition = 45f;
+    public float hitForce = 10000f;
+    public float damper = 150f;
 
-    // Start is called before the first frame update
+    public string inputName;
+
+
+    HingeJoint hinge;
+
+
     void Start()
     {
-        dobraRigidbody = GetComponent<Rigidbody>();
-        force = new Vector3(0,3 , 200);
-
+        hinge = GetComponent<HingeJoint>();
+        hinge.useSpring = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
 
-        Vector3 position = dobraRigidbody.transform.position;
+        JointSpring jointSpring = new JointSpring();
 
+        jointSpring.spring = hitForce;
+        jointSpring.damper = damper;
 
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetAxis(inputName) == 1)
         {
-
-            Debug.Log("sfosdf");
-
-            position.x += 10;
-
-            
-
-            dobraRigidbody.AddForce(force);
+            jointSpring.targetPosition = pressedPosition;
         }
+        else
+        {
+            jointSpring.targetPosition = restPosition;
+        }
+
+
+        hinge.spring = jointSpring;
+        hinge.useLimits = true;
+
     }
 }
