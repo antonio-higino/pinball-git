@@ -3,6 +3,7 @@ using UnityEngine;
 public class LancarBola : MonoBehaviour
 {
     Rigidbody bola;
+    public int pontuacao;
     public float forca = 0f;
     float angulo = 160f;
     public bool podeLancar;
@@ -11,6 +12,7 @@ public class LancarBola : MonoBehaviour
     void Start()
     {
         bola = GetComponent<Rigidbody>();
+        pontuacao = 0;
         podeLancar = false;
     }
 
@@ -30,9 +32,9 @@ public class LancarBola : MonoBehaviour
             }
             else if (Input.GetKey(KeyCode.Space))
             {
-                if (forca < 10f)
+                if (forca < 12f)
                 {
-                    forca += 0.05f;
+                    forca += 0.04f;
                 }
             }
         }
