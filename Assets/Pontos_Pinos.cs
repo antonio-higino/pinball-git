@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pontos_Pino1 : MonoBehaviour
+public class Pontos_Pinos : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
