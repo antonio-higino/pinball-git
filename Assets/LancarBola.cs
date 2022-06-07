@@ -34,7 +34,7 @@ public class LancarBola : MonoBehaviour
             {
                 if (forca < 12f)
                 {
-                    forca += 0.04f;
+                    forca += 0.08f;
                 }
             }
         }
