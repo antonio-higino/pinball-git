@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Pontos_Pinos : MonoBehaviour
 {
+
+
+    public int pontuacao = 1000; 
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +21,7 @@ public class Pontos_Pinos : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        other.gameObject.GetComponent<LancarBola>().pontuacao += 1000;
+        other.gameObject.GetComponent<LancarBola>().pontuacao += pontuacao;
         Debug.Log("Pontuacao: " + other.gameObject.GetComponent<LancarBola>().pontuacao);
     }
 }

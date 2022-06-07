@@ -25,7 +25,7 @@ public class ControleBolas : MonoBehaviour
         if (other.attachedRigidbody) {
             if (bolasRestantes > 0)
             {
-                //other.gameObject.transform.Translate(Vector3.forward * 0f * Time.deltaTime);
+                other.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
                 other.gameObject.transform.position = posicaoReset;
                 bolasRestantes--;
                 Debug.Log("Bolas restantes: " + bolasRestantes);

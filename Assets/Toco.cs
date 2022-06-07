@@ -24,9 +24,9 @@ public class Toco : MonoBehaviour
         Vector3 velocity = ballBody.velocity;
         velocity.z = 0;
 
+        coll.gameObject.GetComponent<LancarBola>().pontuacao +=  500;
 
-
-        Debug.Log(gameObject.name);
+        Debug.Log("Pontuacao: " + coll.gameObject.GetComponent<LancarBola>().pontuacao);
 
 
         if (gameObject.name == "Toco_2")
