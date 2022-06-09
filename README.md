@@ -1,8 +1,10 @@
 # pinball-git
 
-DENYS RAFAEL NOBRE DE OLIVEIRA;
-ANTONIO HIGINO BISNETO LEITE MEDEIROS;
-MARLON SECUNDO DE OLIVEIRA FERREIRA;
-JOAO VITOR DIAS XAVIER;
+Membros do grupo:
 
-Para executar a aplicação, basta importar o projeto no Unity Hub após ter clonado o mesmo para um repositório!
+- DENYS RAFAEL NOBRE DE OLIVEIRA;
+- ANTONIO HIGINO BISNETO LEITE MEDEIROS;
+- MARLON SECUNDO DE OLIVEIRA FERREIRA;
+- JOAO VITOR DIAS XAVIER;
+
+Para testar o jogo, basta clonar o repositório do git e no Unity Hub clicar em Open-> selecionar a pasta do projeto.
