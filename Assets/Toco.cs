@@ -5,6 +5,8 @@ using UnityEngine;
 public class Toco : MonoBehaviour
 {
     // Start is called before the first frame update
+
+    GameObject destino;
     void Start()
     {
     }

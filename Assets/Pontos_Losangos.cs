@@ -19,7 +19,12 @@ public class Pontos_Losangos : MonoBehaviour
     private void OnCollisionEnter(Collision coll)
     {
         Rigidbody ballBody = coll.gameObject.GetComponent<Rigidbody>();
+
+        Vector3 velocity = ballBody.velocity;
+        velocity.z = 15;
+
         coll.gameObject.GetComponent<LancarBola>().pontuacao += 750;
+        ballBody.velocity = velocity;
         Debug.Log("Pontuacao: " + coll.gameObject.GetComponent<LancarBola>().pontuacao);
     }
 }
